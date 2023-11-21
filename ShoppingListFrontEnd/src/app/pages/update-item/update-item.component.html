@@ -1,0 +1,9 @@
+<div class="update-item-container" *ngIf="currentItem">
+  <form (ngSubmit)="updateItem()">
+    <label>Name</label>
+    <input [(ngModel)]="currentItem.name" name="name" placeholder="name"/>
+    <label>Description</label>
+    <input [(ngModel)]="currentItem.description" name="description" placeholder="description"/>
+    <button type="submit" [disabled]="isCurrenItemTheSame()"class="update-item-button"> Update </button>
+  </form>
+</div>

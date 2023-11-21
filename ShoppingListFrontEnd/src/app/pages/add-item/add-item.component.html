@@ -1,0 +1,9 @@
+<div class="add-item-container" *ngIf="itemToAdd">
+  <form (ngSubmit)="addItem()">
+    <label>Name</label>
+    <input [(ngModel)]="itemToAdd.name" name="name" placeholder="name"/>
+    <label>Description</label>
+    <input [(ngModel)]="itemToAdd.description" name="description" placeholder="description"/>
+    <button type="submit" [disabled]="fieldsFullfilled()" class="add-item-button"> Add </button>
+  </form>
+</div>

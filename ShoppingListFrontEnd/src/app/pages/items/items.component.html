@@ -1,0 +1,40 @@
+<div class="items-container">
+  <table *ngIf="itemsModel.items">
+    <thead>
+    <tr>
+      <th class="header">Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th class="header">Bought</th>
+      <th class="header">Update</th>
+      <th class="header">Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of itemsModel.items">
+      <td class="td-id">{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td>
+        <span class="hover-icon">
+          <mat-icon class="icon" [matTooltip]="item.bought ? 'Click to mark as not bought' : 'Click to mark as bought'" [fontIcon]="item.bought ? 'check_box' : 'check_box_outline_blank'"
+                    (click)="checkItem(item.id)"></mat-icon>
+        </span>
+      </td>
+      <td>
+        <span class="hover-icon">
+          <mat-icon class="icon" [matTooltip]="'Click for updating item'" fontIcon="update" (click)="navigateToUpdatePage(item.id)"></mat-icon>
+        </span>
+      </td>
+      <td>
+        <span class="hover-icon">
+          <mat-icon class="status-danger" [matTooltip]="'Click for deleting item'" fontIcon="restore_from_trash"
+          (click)="removeItem(item.id)">
+          </mat-icon>
+        </span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button (click)="navigateToAdd()" class="add-item-button"> Add item </button>
+</div>
