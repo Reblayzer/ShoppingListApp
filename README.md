@@ -5,7 +5,7 @@ This repository documents my approach to the assignment, detailing the steps and
 ## Development Timeline
 
 ### November 14th
-- Explored Angular concepts extensively, emphasizing components, services, modules, and routing to bolster front-end skills necessary for this assignment.
+- Explored Angular concepts extensively, focusing on components, services, modules, and routing to strengthen the front-end skills relevant for the assignment.
 
 ### November 16th
 - Completed backend setup using the Spring Boot framework, establishing connections to the database and ensuring reliability through comprehensive testing.
